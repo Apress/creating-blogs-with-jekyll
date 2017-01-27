@@ -1,0 +1,10 @@
+<ul>
+{% for member in site.data.{{ site.current }}.rebuttal %}
+  <li>
+    <a href="https://github.com/{{ member.github }}">
+      {{ member.name }}
+    </a>
+    <p> {{ member.comment }} </p>
+  </li>
+{% endfor %}
+</ul>

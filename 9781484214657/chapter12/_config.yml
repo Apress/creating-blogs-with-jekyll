@@ -1,0 +1,40 @@
+# Site settings
+title: Open Healthcare
+email: your-email@domain.com
+description: A platform for the delivery of patient-care information and patient-data requests to patients in a intuitive manner.
+baseurl: "" # Leave this as is
+url: "http://jekyll-mini-blog.github.io" # The site address given in the format username.github.io
+
+
+twitter_username: jekyllrb
+github_username:  jekyll
+google_play: 'GDGX'
+google_plus_com: '109485346959707049693'  # Community link
+google_plus_per: '+GDGManagua'  #Personal link
+facebook_app_id: 12345
+
+# Layout settings
+header_type: default  # values [ drawer, default ]
+post_type: highlight    # values [ highlight, default ]
+pagination_type: default  # values [ ops, default ]
+
+more_vert:
+  option1:
+    name: Cool Option 1
+    link: www.myawesomelink.com
+  option2:
+    name: Cool Option 2
+    link: www.myawesomelink.com
+  option3:
+    name: Cool Option 3
+    link: www.myawesomelink.com
+
+disqus: true
+disqus_shortname: 'gdgmanagua'
+
+# Build settings
+markdown: kramdown
+
+
+# Live story feed
+current_crisis: Finishing chapter 12

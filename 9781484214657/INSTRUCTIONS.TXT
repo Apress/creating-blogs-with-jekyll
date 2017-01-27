@@ -1,0 +1,45 @@
+The credit for all the Jekyll themes included in this archive belongs to the developers involved in the respective projects. Hats off to them for making this book possible.
+
+Here, I want to document any known issues or special instructions needed to push the code included online to GitHub and see the project in action.
+
+To push the code here, simply use the following three commands:
+1. $ git init
+2. $ git add -A :/
+3. $ git commit -m "Initial commit"
+
+After that, you would have created a Git repository locally. Now go to GitHub and create a root repository. After creating the root repository, you will see instructions for how to push an existing repository from the command line. 
+
+They will look like the following:
+1. $ git remote add origin <address>
+2. $ git push -u origin master
+
+===================================================================
+===================================================================
+
+Following is a list of any special instructions.
+
+For all of these chapters, update the site.url variable in _config.yml file to your own root repository address on GitHub.
+
+Set git.remote to your GitHub credentials for each repository in case you need to do multiple commits. See chapter 11 for instructions on how to do this:
+
+$ git config remote.origin.url https://username:password@github.com/{USERNAME}/{REPONAME}.git
+
+Chapter 8 and 9: You can push the code using the commands provided above, no special instructions required.
+
+Chapter 10: Include output:true for each collection that you create, if you want to convert Markdown pages into HTML. See the already existing examples in _config.yml for the collection first and second.
+
+Chapter 11: The code provided in the archive is missing the reveal.js submodule. This is because Git will not allow you push code from a submodule that hasn't been registered properly. To upload this code, you have to follow the following steps:
+
+1. $ git init
+2. $ git add -A :/
+3. $ git commit -m "Initial commit"
+4. $ git remote add origin <address>
+5. $ git push -u origin master
+6. $ git submodule add https://github.com/hakimel/reveal.js.git
+7. $ git add -A :/
+8. $ git commit -m "Adding reveal.js"
+9. $ git push
+
+Chapter 12: No speical instructions
+
+Chapter 13: Update the Rakefile with your own credentials or the build will fail. Make sure you also update the repository addresses from Bitbucket to your own. 

@@ -1,0 +1,30 @@
+{% include foot.html %}
+
+<nav id="post-nav">
+    {% if paginator.previous_page %}
+        <span class="prev">
+            {% if paginator.previous_page == 1 %}
+                <a href="{{ site.baseurl }}" title="Previous Page">
+                    <i class="fa fa-arrow-left"></i> Newer Posts
+                </a>
+            {% else %}
+                <a href="{{ site.baseurl }}page{{ paginator.previous_page }}/">
+                    <i class="fa fa-arrow-left"></i> Newer Posts
+                </a>
+            {% endif %}
+        </span>
+    {% endif %}
+
+    <a href="http://jekyll-mini-blog.github.io/archive"><i class="fa fa-archive"></i> Archive </a>
+
+    {% if paginator.next_page %}
+        <span class="next">
+            <a href="{{ site.baseurl }}page{{ paginator.next_page }}/">
+                Older Posts <i class="fa fa-arrow-right"></i>
+            </a>
+        </span>
+    {% endif %}
+
+</nav>
+
+{% include disqus.html %}

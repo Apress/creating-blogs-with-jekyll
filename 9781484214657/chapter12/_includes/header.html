@@ -1,0 +1,45 @@
+  <!-- Beginning of header -->
+  <header class="mdl-layout__header">
+
+    <div class="mdl-layout__header-row">
+
+      <!-- Title -->
+      <span class="mdl-layout-title">{{ site.title }}</span>
+
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+
+      <!-- Font-awesome icons -->
+      <a href=""><i class="fa fa-home fa-2x"></i></a>      <div class="mdl-layout-spacer"></div>
+      <a href=""><i class="fa fa-gratipay fa-2x"></i></a>  <div class="mdl-layout-spacer"></div>
+      <a href=""><i class="fa fa-envelope-o fa-2x"></i></a><div class="mdl-layout-spacer"></div>
+      <a href=""><i class="fa fa-rss fa-2x"></i></a>       <div class="mdl-layout-spacer"></div>
+
+      <!-- Search box -->
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable is-upgraded">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
+          <i class="material-icons">search</i>
+        </label>
+
+      <!-- Search input and expand -->
+        <div class="mdl-textfield__expandable-holder" >
+          <input class="mdl-textfield__input super-search__input" type="text" id="js-search__input" />
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+    {% for page in site.pages %}
+      {% if page.title %}
+      <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      {% endif %}
+    {% endfor %}
+    </nav>
+
+  </div>
+

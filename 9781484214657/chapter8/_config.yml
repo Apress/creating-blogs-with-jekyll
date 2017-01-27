@@ -1,0 +1,42 @@
+name: News Brief
+description: Science and Society
+meta_description: "A mini-blog on the delicate balance between science and society"
+
+aboutPage: true
+
+markdown: kramdown
+highlighter: rouge
+
+paginate: 1
+baseurl: ''
+domain_name: 'http://jekyll-mini-blog.github.io/'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: true
+disqus_shortname: 'jekyll-mini-blog'
+
+# Details for the RSS feed generator
+url:            'http://jekyll-mini-blog.github.io/'
+author:         'Vikram Dhillon'
+authorTwitter:  'opsbug'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post

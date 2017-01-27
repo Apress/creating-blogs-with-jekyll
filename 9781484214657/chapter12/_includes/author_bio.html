@@ -1,0 +1,11 @@
+<hr />
+
+<table>
+      {% assign author = site.data.authors[page.author] %}
+    <tr>
+        <td valign="top" style="padding-right: 1em;">
+        <img src="{{ author.img_path }}" /></td>
+        <td valign="middle"> <strong> {{ author.name }}:</strong></td>
+        <td valign="middle"> {{ author.bio }} </td>
+    </tr>
+</table>

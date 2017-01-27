@@ -1,0 +1,77 @@
+		<!-- Footer -->
+			<div id="footer-wrapper">
+				<section id="footer" class="container">
+					<div class="row">
+						<div class="8u">
+							<section>
+								<header>
+									<h2>The Blog</h2>
+								</header>
+								<ul class="dates">
+								{% for post in site.posts offset: 0 limit: 3 %}
+									<li>
+										
+									<span class="date">
+									{{ post.date | date: "%b"}} 
+									<strong>{{ post.date | date: "%d"}}</strong></span>
+
+										<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+										{{ post.excerpt }}
+									</li>
+								{% endfor %}
+								</ul>
+							</section>
+						</div>
+						<div class="4u">
+							<section>
+								<header>
+									<h2>What's this all about?</h2>
+								</header>
+								<a href="#" class="image featured"><img src="{{ site.baseurl }}/assets/images/pic10.jpg" alt="" /></a>
+								<p>
+									This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
+									<a href="http://n33.co">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
+									the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
+								</p>
+								<footer>
+									<a href="{{ site.baseurl }}/posts.html" class="button">The Blog</a>
+								</footer>
+							</section>
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="4u">
+							<section>
+								<header>
+									<h2>Social</h2>
+								</header>
+								<ul class="social">
+									<li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+									<li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+									<li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+									<li><a class="icon fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
+
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										<li>Demo Images: <a href="http://facebook.com/DreametryDoodle">Dreametry Doodle</a></li>
+										<li> Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+									</ul>
+								</div>
+
+						</div>
+					</div>
+				</section>
+			</div>
+
+	</body>
+</html>

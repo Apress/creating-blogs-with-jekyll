@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% if site.theme.header_text %}
+  <div class="call-out" 
+  style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
+    {{ site.theme.header_text }}
+  </div>
+  {% endif %}
+
+<br> </br>
+
+<strong><p align="center"> Our debates: </p> </strong>
+
+<style>
+
+.test{text-align:center}
+ul{list-style-type: none;}
+
+</style>
+
+<div class="test">
+
+<p> 
+The debate in session currently is - <a class="page-link" href="{{ site.baseurl }}/{{ site.current }}/briefing"> {{ site.current }} </a> </p> 
+
+<small><strong> {{ site.curr_description }} </strong></small>
+
+<br> </br>
+
+{% for collection in site.collections %}
+<ul>
+  <p> <img align="center" src="{{ collection.thumbnail }}"> </img> 
+  <li> {{ collection.label }}:<a href="{{ site.baseurl}}/{{ collection.label}}/briefing/">  Briefing </a></li></p>
+</ul>
+{% endfor %} 
+
+</div>
+
+</div>
+
+

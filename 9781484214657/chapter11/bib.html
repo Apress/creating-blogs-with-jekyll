@@ -1,0 +1,33 @@
+---
+layout: page
+---
+
+<!-- jquery import -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<!-- bibtex-js import -->
+<script type="text/javascript" src="http://bibtex-js.googlecode.com/svn/trunk/src/bibtex_js.js"></script>
+
+{% include bib_info.html %}
+
+<div id="bibtex_display"></div>
+
+<div class="bibtex_template">
+    <ul>
+        <li style="list-style: none"><span class="if author"></span></li>
+        <li>
+            <span class="if author"><span class="author" style="font-weight: bold;"></span></span> 
+
+            <span class="if year">(<span class="year"></span>)</span> 
+
+            <span class="if publisher" style="font-weight: bold;"><span class="publisher"></span></span>
+
+            <span class="if url" style="margin-left: 20px"><a class="url" style="color:black; font-size:10px">(view online)</a></span>
+
+            <div style="margin-left: 10px; margin-bottom:5px;">
+                <span class="title"></span>
+            </div>
+
+        </li>
+    </ul>
+</div>

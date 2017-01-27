@@ -1,0 +1,17 @@
+{
+  "_aerobatic": {
+    "router": [
+      {
+        "module": "basic-auth",
+        "path": "/books",
+        "options": {
+          "username": "$BASIC_AUTH_USERNAME",
+          "password": "$BASIC_AUTH_PASSWORD"
+        }
+      },
+      {
+        "module": "webpage"
+      }
+    ]
+  }
+}

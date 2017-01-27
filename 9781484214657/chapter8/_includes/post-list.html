@@ -1,0 +1,17 @@
+<ul id="post-list">
+    {% for post in paginator.posts %}
+        <li>
+            <span><aside class="dates"><i class="fa fa-calendar-check-o"></i> {{ post.date | date:"%b %d" }}</aside></span>
+            <span><h1 style="color:rgb(34, 49, 63)">{{ post.title }}</h1> <h2><i class="fa fa-commenting-o"></i> {{ post.description }}</h2></span>
+
+          <section id="wrapper">
+  			   {{ post.content }}
+  			  </section>
+
+        </li>
+    {% endfor %}
+</ul>
+
+{% if paginator.previous_page or paginator.next_page %}
+    {% include pagination.html %}
+{% endif %}

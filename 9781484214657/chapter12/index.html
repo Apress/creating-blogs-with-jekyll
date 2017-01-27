@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="page-content">
+  <div class="mdl-grid">
+
+    {% for post in site.posts %}
+
+    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
+    
+      <h4 align="center" style="color:rgb(108, 122, 137)"> <i class="fa fa-caret-square-o-right"></i> {% if post.help_title %} {{ post.help_title }} {% else %} {{ post.title }} {% endif %} </h4>
+
+      <div class="mdl-card__supporting-text">
+        <strong> <span>{{ post.date | date: "%b %-d, %Y" }}</span></strong>
+        {% include social.html %}
+        <p>{{ post.excerpt }}</p>
+      </div>
+
+      <div class="mdl-card__actions mdl-card--border">
+
+          <div class="mdl-layout-spacer"></div>
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{ post.url | prepend: site.url }}" >Read More <i class="fa fa-chevron-circle-right"></i></a> <small> Category: {% for cat in post.categories %} {{ cat }} {% endfor %} </small>
+
+      </div>
+
+
+    </div>
+
+    {% endfor %}
+
+  </div>
+</div>

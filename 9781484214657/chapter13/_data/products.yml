@@ -1,0 +1,17 @@
+- name: Change by Design
+  price: 29.99
+  slug: change-by-design
+  sku: CBD
+  image: http://d.gr-assets.com/books/1348453734l/6671664.jpg
+
+- name: Creative Confidence
+  price: 16.90
+  slug: creative-confidence
+  sku: CC
+  image: http://d.gr-assets.com/books/1375677702l/17288649.jpg
+
+- name: The Art of Innovation
+  price: 16.34
+  slug: art-of-innovation
+  sku: AOI
+  image: http://d.gr-assets.com/books/1429647369l/40958.jpg
